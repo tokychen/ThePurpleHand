@@ -1,0 +1,103 @@
+//
+// Type
+// -------------------------------------------
+body,
+html {
+  font-family: "Source Sans Pro", sans-serif;
+}
+a {
+  color: @primary_colour_light;
+}
+h1, h2, h3, h4 {
+  font-weight: 100;
+  color: @primary_colour_dark;
+}
+h1 { font-size: @baseFontSize * 2.95; } // ~38px
+h2 { font-size: @baseFontSize * 2.95; } // ~32px
+h3 { font-size: @baseFontSize * 2.05; }
+p {
+  color: #597090;
+  margin: 0 0 @baseLineHeight / 2;
+  line-height: @baseLineHeight * 1.2;
+  font-size: @baseFontSize;
+}
+.lead {
+  margin-bottom: @baseLineHeight;
+  font-size: @baseFontSize * 1.5;
+  font-weight: 200;
+  line-height: @baseLineHeight * 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  small {
+    display: block;
+    font-weight: 300;
+    font-size: 16px;
+    color: lighten(@gray, 20%);
+  }
+}
+
+//
+// Custom
+// -------------------------------------------
+.bold {
+  font-weight: bold;
+}
+h1.bold {
+  font-size: @baseFontSize * 3.95;
+}
+h2.bold {
+  font-size: @baseFontSize * 3.05;
+}
+
+.uc {
+  text-transform: uppercase;
+}
+
+.de-em {
+  color: fade(@textColor, 80%);
+}
+a {
+  .de-em {
+    color: inherit;
+  }
+}
+.hero .de-em {
+  color: fade(@primary_colour, 80%);
+}
+
+.em {
+  color: @primary_colour; 
+}
+
+.fancy {
+  font-family: serif;
+  font-style: italic;
+}
+
+h1.enlarge { font-size: @baseFontSize * 3.75; } 
+h2.enlarge { font-size: @baseFontSize * 3.25; } 
+h3.enlarge { font-size: @baseFontSize * 2.75; } 
+h4.enlarge { font-size: @baseFontSize * 2.25; } 
+h5.enlarge { font-size: @baseFontSize; }
+h6.enlarge { font-size: @baseFontSize * 1.85; }
+
+address {
+  strong {
+    margin-top: 5px;
+    display: block;
+  }
+  i {
+    margin-right: 6px;
+  }
+}
+
+.img-wrap {
+  float: left;
+  margin: 0 1em 1em 0;
+
+  figcaption {
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+}

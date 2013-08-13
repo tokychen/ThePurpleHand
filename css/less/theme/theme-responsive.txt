@@ -1,0 +1,57 @@
+//
+// Theme specific responsive tweaks
+// File called into app-responsive.less
+// --------------------------------------------------
+
+
+//////////////////////////////////////
+// Navbar changes
+//////////////////////////////////////
+
+// Navbar Collapsed (mobile)
+// -----------------
+@media (max-width: @navbarCollapseWidth) {
+
+}
+
+// Navbar Expanded (desktop)
+// ---------------
+@media (min-width: @navbarCollapseDesktopWidth) {
+
+
+}
+
+
+//////////////////////////////////////
+// General changes
+//////////////////////////////////////
+
+
+//
+// Responsive: Large desktop and up (wide)
+// --------------------------------------------------
+@media (min-width: 1200px) {
+
+}
+
+//
+// Responsive: Tablet to desktop (normal)
+// --------------------------------------------------
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+//
+// Responsive: Landscape phone to desktop/tablet (narrow)
+// --------------------------------------------------
+@media (max-width: 767px) {
+
+}
+
+//
+// Responsive: Up to Landscape phone (mobile)
+// ---------------------
+
+@media (max-width: 480px) {
+
+}

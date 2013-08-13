@@ -1,0 +1,134 @@
+//======================================
+// Helper classes
+// Reuseable for all themes
+//======================================
+
+// type
+// -------------------------------------------
+
+.i-float {
+  .clearfix;
+  
+  i,
+  span {
+    float: left;
+    text-align: left;
+    width: 14%;
+    display: block;
+  }
+  span {
+    width: 84%;
+  }
+}
+
+
+// Layout Utilities
+// -------------------------------------------
+.margin-top {
+  margin-top: 2em;
+}
+.margin-top-small {
+  margin-top: 1em;
+}
+.margin-top-large {
+  margin-top: 3em;
+}
+
+.pull-right {
+  text-align: right;
+}
+.pull-center {
+  text-align: center;
+}
+.inline-el {
+  display: inline-block;
+  
+  h1,h2,h3,h4,h5,p {
+    margin: 0;
+  }
+}
+.well-small {
+  padding: 9px;
+}
+.well-mini {
+  padding: 5px;
+}
+.well {
+  &.well-white {
+    background-color: @white;
+    border: none;
+  }
+}
+
+// overlays
+// -------------------------------------------
+.overlay-wrapper {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  
+  &.overlay-wrapper-bordered {
+    border-bottom: 5px solid transparent;
+    
+    &:hover {
+      border-bottom: 5px solid @primary_colour_grad_start;
+    }
+  }
+  
+  .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: fade(@primary_colour_light, 80%);
+    color: @white;
+    z-index: 100;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    .transition(all 220ms ease-out);
+    text-align: center;
+    padding: 5% 0;
+    .opacity(0);
+    
+    &.on {
+      .opacity(100);
+    }
+  }
+  .underlay {
+    z-index: 99;
+  }
+  
+  &:hover,
+  &.flex-active {
+    .overlay {
+      .opacity(100);
+      //background: transparent;
+      
+      &.on {
+        .opacity(0);
+      }
+    }
+  }
+}
+
+// Misc.
+// -------------------------------------------
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+
+.fancy {
+  font-family: 'Condiment', cursive;
+}
+
+.spacer {
+  font-weight: bold;
+  color: @primary_colour;
+  
+  &.dark {
+    color: @primary_colour_dark;
+  }
+}

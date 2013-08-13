@@ -1,0 +1,49 @@
+//
+// Custom backgrounds
+// --------------------------------------------------
+
+.bg-faces {
+  .at2x('../img/backgrounds/faces.jpg', auto, 250px);
+  background-repeat: repeat-x;
+  
+  .filter {
+    min-height: 250px;
+  }
+}
+
+.bg-blurred {
+  background: url(../img/backgrounds/people-blur.jpg) left top no-repeat;
+  
+  .filter {
+    padding: 5em 0;
+  }
+}
+
+.filter {
+  color: @white;
+  
+  h1, h2, h3, h4, h5, h6, p {
+    color: @white;
+    margin: 0;
+  }
+  
+  &.light {
+    background-color: #066774;
+    #translucent > .background(#066774, 0.7);
+  } 
+  &.dark {
+    background-color:@primary_colour;
+    #translucent > .background(@primary_colour_dark, 0.8);
+  }
+}
+
+//transparent image background colours
+.img-bg-primary {
+  background-color: @primary_colour;
+}
+.img-bg-primary-light {
+  background-color: @primary_colour_light;
+}
+.img-bg-primary-dark {
+  background-color: @primary_colour_dark;
+}

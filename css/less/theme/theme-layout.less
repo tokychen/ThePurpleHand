@@ -1,0 +1,75 @@
+//======================================
+// Theme layout/structure
+// 
+//======================================
+
+// Header
+// -------------------------------------------
+#navigation {
+  .clearfix;
+  z-index: 200;
+  background: @white;
+}
+
+.navbar {
+  color: @navbarText;
+  margin: 0;
+  border-bottom: 4px solid @primary_colour_dark; 
+}
+
+.navbar-inner {
+  margin: 0;
+  padding: 0;
+  .border-radius(2px);
+  border: 0;
+  .box-shadow(none);
+  background: transparent;
+  height: @navbarHeight;
+  .transition(all 0.4s ease-out);
+}
+
+// Content
+// -------------------------------------------
+#content {
+  padding: @navbarHeight + 4 0 0 0;
+  background: @white;
+  .transition(all 0.4s ease-out);
+}
+
+// Footer
+// -------------------------------------------
+#footer {
+  min-height: 100px;
+  padding: @gridGutterWidth 0;
+  background: @primary_colour_dark;
+  font-size: 14px;
+  color: @primary_colour_grad_start;
+  
+  p {
+    font-size: 14px;
+    color: @primary_colour_grad_start;
+  }
+  
+  a {
+    color: @primary_colour_light;
+    
+    &:hover {
+      color: @primary_colour_light;
+      cursor: pointer;
+    }
+  }
+  
+  .social-media {
+    a {
+      color: @white;
+      
+      &:hover {
+        color: @primary_colour_grad_start;
+      }
+    }
+  }
+}
+
+
+// Variations
+// -------------------------------------------

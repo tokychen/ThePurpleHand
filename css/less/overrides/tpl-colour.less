@@ -1,0 +1,96 @@
+//////////////////////////////////////////////////////////////////
+// Colour Overrides
+//////////////////////////////////////////////////////////////////
+
+body {
+  
+  //////////////////////////////////////////////////////////////////
+  // navbar
+  //////////////////////////////////////////////////////////////////
+  .navbar {
+    /* navbar */
+  }
+  .navbar-inner {
+    /* navbar-inner */
+    background: #ff0000;
+  }
+  
+  //@navbar elements
+  // --------------
+  .navbar .brand {
+    /* brand */
+  }
+  .navbar-text {
+    /* navbar-text */
+  }
+  .navbar-link {
+    /* navbar-link */
+    &:hover {
+      /* navbar-link :hover */
+    }
+  }
+  .navbar .divider-vertical {
+    /* divider-vertical */
+  }
+  
+  //@navbar links
+  // --------------
+  .navbar .nav > li > a {
+    /* navbar links */
+    background: #000000;
+  }
+  .navbar .nav > li > a:focus,
+  .navbar .nav > li > a:hover {
+    /* navbar links :hover & :focus */
+  }
+  .navbar .nav > .active > a,
+  .navbar .nav > .active > a:hover,
+  .navbar .nav > .active > a:focus {
+    /* navbar links active */
+  }  
+  
+  //@responsive menu button
+  // --------------
+  .navbar .btn-navbar {
+    /* responsive menu button */
+  }
+  .navbar .btn-navbar .icon-bar {
+    /* responsive menu button content */
+  }
+
+  // @Dropdown menus
+  // --------------
+  .navbar .nav > li > .dropdown-menu {
+    &:before {
+      /* dropdown menu caret/indicator */
+    }
+    &:after {
+      /* dropdown menu caret/indicator */
+    }
+  }
+  .navbar-fixed-bottom .nav > li > .dropdown-menu {
+    &:before {
+      /* dropdown menu caret/indicator for navbar-fixed-bottom */
+    }
+    &:after {
+      /* dropdown menu caret/indicator for navbar-fixed-bottom */
+    }
+  }
+  .navbar .nav li.dropdown > a:hover .caret {
+    /* dropdown menu caret/indicator :hover */
+  }
+  .navbar .nav li.dropdown.open > .dropdown-toggle,
+  .navbar .nav li.dropdown.active > .dropdown-toggle,
+  .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+    /* open dropdown menu */
+  }
+  .navbar .nav li.dropdown > .dropdown-toggle .caret {
+    /* dropdown menu content caret/indicator */
+  }
+  .navbar .nav li.dropdown.open > .dropdown-toggle .caret,
+  .navbar .nav li.dropdown.active > .dropdown-toggle .caret,
+  .navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
+    /* dropdown menu content caret/indicator active */
+  } 
+
+}//body

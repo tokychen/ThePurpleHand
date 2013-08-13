@@ -1,0 +1,322 @@
+
+/*/////////////////////////////////////////////////////////////////////
+ // 
+ // Custom theme code styles
+ // Written by Themelize.me (http://themelize.me)
+ // 
+ // This is a starter template/example for overriding theme colours
+ // 
+ // ----------------------------------------------------
+ // 
+ // Remove unused code & commenting for better performances
+ // 
+ // ----------------------------------------------------
+ // 
+ // @see - Usefuls tools online for editing
+ // 1. http://charliepark.org/bootstrap_buttons/ - Button style generator
+ // 2. http://www.colorzilla.com/gradient-editor/ - CSS3 gradient maker
+ // 
+ // @note
+ // To ensure custom styles are picked up
+ // wrap definitions in body tag or a class on the body or html tag
+ // ie.
+ // body .navbar-inner {
+ //   background: #ff0000;
+ // }
+ //
+ // OR
+ // .alternative .navbar {
+ //   background: #000;
+ // }
+ // 
+ /////////////////////////////////////////////////////////////////////*/
+@import "theme/theme-variables.less";
+@import "theme/theme-mixins.less";
+@import "assets/retina.less";
+@import "theme/theme-buttons.less";
+@import "bootstrap/mixins.less";
+
+
+.alternative {
+  
+  /* ----------------------------------------------------
+   * Header
+   * ----------------------------------------------------*/
+  .brand {
+    h1 {    
+      a {
+        .at2x('../img/misc/icon_logo-alt.png', 230px, 74px);
+      }
+    }
+  }  
+  .navbar {
+    border-color: @alt_colour_dark;
+  }
+  #main-menu li a {
+    color: @alt_colour_dark;
+    
+    &.stamp {
+      color: @white;
+      background: @alt_colour_light;
+    }
+  }
+  .mobile-toggle-trigger {
+    &:hover,
+    &.open {
+      background: #97cab0;
+    }
+  }
+  #jPanelMenu-menu {
+    background: #97cab0;
+    
+    //override menu 
+    #main-menu {
+      li {    
+        a {
+          background: #EAF5ED;
+          
+          &.stamp {
+            background: @alt_colour_light;
+          }
+        }
+        
+        &.current {
+          a {
+            background: @white;
+            
+            &.stamp {
+              background: @alt_colour;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* ----------------------------------------------------
+   * Buttons - override at CSS level
+   * NOTE: Both colours are available in both schemes
+   * ----------------------------------------------------*/
+    .btn-primary {
+      .btn-alt;
+    }
+    .btn-primary-dark {
+      .btn-alt;
+      .btn-alt-dark;
+    }
+    .btn-primary-light {
+      .btn-alt;
+      .btn-alt-light;
+    }
+    .btn-primary-grad {
+      .btn-alt;
+      .btn-alt-grad;
+    }  
+  
+  /* ----------------------------------------------------
+   * Misc.
+   * ----------------------------------------------------*/
+  // fills
+  &.gray,
+  .gray {
+    background-color: #EAF5ED;
+  }
+  &.gray-light,
+  .gray-light {
+    background-color: #D3E8D9;
+  }
+  
+  &.primary,
+  .primary {
+    background-color: #51a67b;
+  }
+  
+  &.primary, .primary {
+    color: @alt_colour_grad_start;
+  
+    h1, h2, .bold {
+      color: @white; 
+    }
+    h3, h4, h5, p {
+      color: @alt_colour_grad_start;
+      
+      &.bold {
+        color: @white;
+      }
+    }
+  }  
+  h1, h2, h3, h4 {
+    color: @alt_colour_dark;
+  }
+  p {
+    color: darken(@alt_colour_dark, 10%);
+  }
+  a {
+    color: @alt_colour_light;
+  }
+  blockquote:before {
+    color: @alt_colour;
+  }
+  
+  .flex-direction-nav a {
+    color: @alt_colour_light;
+    
+    &:hover {
+      color: @alt_colour_light;
+    }
+  }
+  .flex-control-nav li a:hover, .flex-control-nav li a.flex-active {
+    border-color: @alt_colour_light;
+  }
+  
+  .img-bg-primary {
+    background-color: @alt_colour;
+  }
+  .img-bg-primary-light {
+    background-color: @alt_colour_light;
+  }
+  .img-bg-primary-dark {
+    background-color: @alt_colour_dark;
+  }
+
+  @service-height: 100px;
+  @service-width: 100px;  
+  .service-agile {
+    .at2x('../img/services/service-agile-alt.png', @service-height, @service-width);
+  } 
+  .service-backend {
+    .at2x('../img/services/service-backend-alt.png', @service-height, @service-width);
+  } 
+  .service-css3 {
+    .at2x('../img/services/service-css3-alt.png', @service-height, @service-width);
+  } 
+  .service-drupal {
+    .at2x('../img/services/service-drupal-alt.png', @service-height, @service-width);
+  } 
+  .service-html5 {
+    .at2x('../img/services/service-html5-alt.png', @service-height, @service-width);
+  } 
+  .service-pm {
+    .at2x('../img/services/service-pm-alt.png', @service-height, @service-width);
+  } 
+  .service-wordpress {
+    .at2x('../img/services/service-wordpress-alt.png', @service-height, @service-width);
+  } 
+  
+  .filter {
+    h1, h2, h3, h4, h5 {
+      color: @white;
+    }
+    
+    &.light {
+      background-color: @alt_colour_light;
+      #translucent > .background(@alt_colour, 0.7);
+    }    
+    &.dark {
+      background-color: @alt_colour_dark;
+      #translucent > .background(@alt_colour_dark, 0.7);
+    }
+  }
+  
+  /* ----------------------------------------------------
+   * Sections
+   * ----------------------------------------------------*/
+  
+  /* --------------------
+   * About
+   * -------------------*/
+  .about {
+    background-color: #51a67b;
+    
+    .photo {
+      img {
+        border-color: @alt_colour_dark;
+      }
+    }
+    .details  {
+      .secondary-focus {
+        color: @alt_colour_dark;
+      }
+      
+      p {
+        color: #d5f4e6;
+      }
+      
+      .btn {
+        .box-shadow(0 0 2px @alt_colour_dark);
+      }
+    }    
+  }
+  
+  .clients {
+    .gray;
+  }
+
+  /* --------------------
+   * Services
+   * -------------------*/
+  .clients,
+  .testimonials, 
+  .services {
+    border-color: #D3E8D9;
+  }
+  
+  /* --------------------
+   * timeline
+   * -------------------*/  
+  .timeline-breaker {
+    background-color: #0c3223;
+    color: @white;
+    
+    &:after {
+      border-top-color: #0c3223;
+    }
+  }
+  .timeline-end {
+    .timeline-breaker {
+      background-color: transparent;
+      color: #0c3223;
+    }
+  }
+  .timeline .timeline-item.highlight:after {
+    color: @alt_colour_light;
+  }
+  .timeline .timeline-item {
+    background: #edf5ee;
+  }
+  .timeline .timeline-item:before {
+    color: #edf5ee;
+  }
+  .timeline-item-date {
+    color: #74948c;
+  }
+
+  /* --------------------
+   * Contact
+   * -------------------*/  
+  .contact select, .contact textarea, .contact input[type="text"], .contact input[type="password"], .contact input[type="datetime"], .contact input[type="datetime-local"], .contact input[type="date"], .contact input[type="month"], .contact input[type="time"], .contact input[type="week"], .contact input[type="number"], .contact input[type="email"], .contact input[type="url"], .contact input[type="search"], .contact input[type="tel"], .contact input[type="color"], .contact .uneditable-input {
+    background-color: @alt_colour;
+  }
+  .contact address a i {
+    color: @alt_colour_dark;
+  }
+  
+  #footer {
+    background-color: @alt_colour_dark;
+    
+    p {
+      color: #e2f2e9;
+    }
+    
+    a {
+      color: @alt_colour_light;
+    }
+    .social-media a {
+       color: @white;
+       
+      &:hover {
+        color: #dddddd;
+      }
+    }
+  }
+}

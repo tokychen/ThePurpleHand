@@ -1,0 +1,52 @@
+//
+// Mixins
+// --------------------------------------------------
+
+
+.border-box {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+      box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.icomoon-bg(@code) {
+  font-family: 'IcoMoon';
+  font-style: normal;
+  speak: none;
+  display: inline-block;
+  content: @code;
+}
+
+.fontawesome-bg(@code) {
+  font-family: FontAwesome;
+  font-style: normal;
+  speak: none;
+  display: inline-block;
+  content: @code;
+}
+
+// Button backgrounds
+// ------------------
+.buttonBackgroundFlat(@startColor, @endColor, @textColor: #fff, @textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
+  background-color: @startColor;
+  background: @startColor;
+  color: @textColor;
+  text-shadow: @textShadow;
+  border-color: @endColor @endColor darken(@endColor, 15%);
+  border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);  
+  .reset-filter();
+
+  // in these cases the gradient won't cover the background, so we override
+  &:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
+    color: @textColor;
+    background-color: @endColor;
+    background: @endColor;
+  }
+
+  // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
+  &:active,
+  &.active {
+    background-color: darken(@endColor, 10%) e("\9");
+    background: darken(@endColor, 10%) e("\9");
+  }
+}
