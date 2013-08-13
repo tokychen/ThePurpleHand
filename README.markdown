@@ -1,3 +1,1 @@
---------------------------------------
-The Purple Hand - Custom Made jewelery
---------------------------------------
+Thanks Github for hosting my site
