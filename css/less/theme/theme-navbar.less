@@ -1,0 +1,90 @@
+//======================================
+// Theme menus
+// 
+//======================================
+.navbar {
+  background: #F6F7F9;
+  
+  .nav {
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+  }
+}
+
+@navbarMargin: 40px;
+
+// Main menu fixation - desktop
+@media (min-width: @navbarCollapseDesktopWidth) {
+  .navbar-fixated {
+    @navbarHeightFixated: @navbarHeight - 20;
+    
+    .navbar-inner {
+      height: @navbarHeightFixated;
+    }
+    .navbar .brand {
+      margin: (@navbarHeightFixated - 74)/2 0;
+    }
+    
+    #main-menu li a {
+      height: @navbarHeightFixated;
+      line-height: @navbarHeightFixated;
+      
+      &.stamp {
+        height: @navbarHeight - 30;
+        line-height: @navbarHeight - 30;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    }
+    
+    #content {
+      padding-top: @navbarHeightFixated;
+    }
+  }
+}
+
+// Tablet header
+// -----------------
+@media (max-width: @navbarCollapseWidth) {
+  .navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+    padding: 0;
+  }
+  .navbar .container {
+    position: relative;
+    width: (@gridColumnWidth768 * @gridColumns) + (@gridGutterWidth768 * (@gridColumns - 1));
+  }
+  #content {
+    padding-top: 0;
+  }
+}
+
+// Mobile header
+// -----------------
+@media (max-width: 767px) {
+  .mobile-toggle-trigger {
+    margin-top: 14px;
+  }
+  .navbar .container {
+    width: auto;
+    padding: 0 1em;
+  }
+  body .navbar .brand {
+    margin: 10px 0;
+    
+    h1 {     
+      a {
+        width: 155px;
+        height: 50px;
+        background-size: 155px, 50px;
+        
+        &:hover {
+          .opacity(80);
+        }
+      }
+    }
+  }
+  .navbar-inner {
+    height: 70px;
+  }
+}

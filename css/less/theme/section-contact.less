@@ -1,0 +1,68 @@
+//======================================
+// Contact form/section
+//======================================
+
+.contact {
+  select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    height: 60px; //60 - 8 (padding)
+    padding: 4px 20px;
+    display: block;
+    font-size: 18px;
+    .border-box;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: @primary_colour;
+    color: #eee;
+    font-weight: 100;
+    
+    &:focus {
+      color: @white;
+    }
+  }
+  
+  textarea {
+    height: 140px; //60x2 + 20 margin
+    padding: 15px 20px;
+  }
+  
+  .btn {
+    float: right;
+  }
+  
+  address {
+    font-size: 1.2em;
+    color: @grayLight;
+    
+    a {
+      font-weight: 600;
+      font-size: 0.9em;
+      
+      i {
+        font-size: 1.6em;
+        color: @primary_colour_dark;
+      }
+      
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Responsive: Landscape phone to desktop/tablet (narrow)
+// --------------------------------------------------
+@media (max-width: 767px) {
+  .contact {
+    select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+      margin-bottom: 10px;
+    }
+    .btn {
+      float: none;
+      display: block;
+      width: 100%;
+    }
+    address {
+      margin-top: 20px;
+    }
+  }
+}

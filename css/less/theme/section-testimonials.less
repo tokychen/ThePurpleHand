@@ -1,0 +1,105 @@
+//======================================
+// Testimonials section
+//======================================
+
+.testimonials {
+  padding-top: 0;
+  border-bottom: 4px solid #D8DFE7;
+  
+  .flexslider {
+    padding-bottom: 40px;  
+  }
+  .flex-direction-nav {
+    display: none;
+  }
+  .flex-control-nav {
+    bottom: 15px; 
+  }
+  
+  .filter {
+    max-height: 250px;
+    height: 250px;
+    
+    h2 {
+      color: @white;
+      padding-top: 100px;
+      margin: 0;
+      font-size: 60px;
+    }
+  }
+}
+
+blockquote {
+  padding: 1em 5em;
+  margin: 0;
+  border-left: none;
+  text-align: center;
+  .border-box;
+  
+  &:before {
+    .fontawesome-bg("\f10d");
+    font-size: 50px;
+    padding: 0.5em 0;
+    color: @primary_colour_light;
+  }
+  
+  p {
+    padding: 0;
+    margin: 0;
+    font-size: 2.2em;
+    font-style: italic;
+  }
+  small {
+    display: block;
+    padding: 10px 0 0 0;
+    font-size: 16px;
+    font-style: normal;
+    color: #597090;
+    
+    &:before {
+      content: ' '; 
+    }
+    
+    a {
+      color: @primary_colour_light;
+      
+      &:hover {
+        color: @primary_colour;
+      }
+    }
+  }
+}
+
+// Testimonials in Flexslider
+// --------------------------------------------------
+.flexslider,
+.flexslider-carousel {
+  blockquote {
+    padding: 0 10em 1em 10em;
+    float: left;
+  }
+}
+
+//
+// Responsive: Landscape phone to desktop/tablet (narrow)
+// --------------------------------------------------
+@media (max-width: 767px) {
+  .flexslider,
+  .flexslider-carousel {
+    blockquote {
+      padding: 1em;
+    }
+  }
+}
+
+//
+// Responsive: Landscape phone to desktop/tablet (narrow)
+// --------------------------------------------------
+@media (max-width: 480px) {
+  .flexslider,
+  .flexslider-carousel {
+    blockquote {
+      padding: 1em;
+    }
+  }
+}

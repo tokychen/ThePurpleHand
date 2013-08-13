@@ -1,0 +1,95 @@
+//
+// Alerts
+// --------------------------------------------------
+
+
+// Base styles
+// -------------------------
+
+.alert { 
+  padding: 20px 25px 20px 25px;
+  .border-radius(4px);
+  .clearfix;
+  position: relative;
+  border-color: @warningBorder;
+  background: @warningBackground;
+  font-size: 1.2em;
+  
+  .close,
+  h4,
+  h3,
+  h2,
+  h1 {
+    color: @warningText;
+    
+    &.title {
+      margin: 0;
+      font-weight: bold;
+      font-size: 1.6em;
+      line-height: 1;
+    }
+  }
+  
+  [class^="icon-"],
+  [class*=" icon-"] {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    height: 100%;
+    font-size: 30px;
+    margin-top: -15px;
+  }
+  
+  &.alert-with-icon {
+    padding-left: 60px;
+  }
+}
+
+// Adjust close link position
+.alert .close {
+  top: -20px;
+  right: -15px;
+}
+
+
+// Alternate styles
+// -------------------------
+
+.alert-success {
+  border-color: @successBorder;
+  background: @successBackground;
+  
+  .close,
+  h4,
+  h3,
+  h2,
+  h1 {
+    color: @successText;
+  }
+}
+.alert-danger,
+.alert-error {
+  border-color: @errorBorder;
+  background: @errorBackground;
+  
+  .close,
+  h4,
+  h3,
+  h2,
+  h1 {
+    color: @errorText;
+  }
+}
+.alert-info {
+  border-color: @infoBorder;
+  background: @infoBackground;
+  
+  .close,
+  h4,
+  h3,
+  h2,
+  h1 {
+    color: @infoText;
+  }
+}
+

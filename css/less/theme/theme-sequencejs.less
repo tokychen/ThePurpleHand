@@ -1,0 +1,206 @@
+//
+// Sequence.js theming
+// --------------------------------------------------
+
+// Common
+// --------------------------------------------------
+.sequence-slider {
+  position: relative; //required
+  height: 480px;
+}
+
+.sequence-canvas {
+  height: 100%; 
+  width: 100%;
+  margin: 0;
+  padding: 0;  
+  
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    //.transition(all 2s ease-out);
+    //.opacity(1);
+    
+    * {
+      z-index: 2;
+      //sequencejs needs this but animate.css doesn't use it
+      -webkit-transition-duration: 1s;
+      -moz-transition-duration: 1s;
+      -o-transition-duration: 1s;
+      -ms-transition-duration: 1s;
+      transition-duration: 1s;
+      
+      //extra niceness
+      -webkit-transition-timing-function: ease-in-out;
+      -moz-transition-timing-function: ease-in-out;
+      -ms-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+      transition-timing-function: ease-in-out;
+      
+      //.translate(0, 0);
+    }
+    
+    .slide-bg {
+      z-index: -1;
+    }
+    
+    .container,
+    .row-fluid {
+      display: block;
+      overflow: hidden;
+      z-index: 4;
+    }
+  }
+  
+  //fake animation for non-animating wrapper tags
+  .animate-in {
+    * {
+      .translate(0, 1px);
+    }
+  }
+}
+
+
+// Animation
+// ------------------------------------------
+.animated {
+	-webkit-animation-duration: 1s;
+	   -moz-animation-duration: 1s;
+	     -o-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	   -moz-animation-fill-mode: both;
+	     -o-animation-fill-mode: both;
+	        animation-fill-mode: both;
+}
+
+// effects
+// ------------------------------------------
+// Based on animate.css animations
+
+// fades
+.fadeIn {
+  .opacity(0);
+}
+.fadeInUp {
+  .opacity(0);
+  .translate(0, 40px);
+}
+.fadeInDown {
+  .opacity(0);
+  .translate(0, -40px);
+}
+.fadeOut {
+  .opacity(100);
+}
+
+// slides
+.slideInLeft {
+  .translate(-600px, 0);
+}
+.slideOutLeft {
+  .translate(-600px, 0);
+}
+.slideInRight {
+  .translate(600px, 0);
+}
+.slideOutRight {
+  .translate(2000px, 0);
+}
+
+
+.animate-in {
+  // fades
+  .fadeIn {
+    .opacity(100);
+  }
+  .fadeInUp,
+  .fadeInDown {
+    .opacity(100);
+    .translate(0, 0);
+  }
+  
+  // slides
+  .slideInLeft {
+    .translate(0, 0);
+  }
+}
+
+.animate-out {
+  .fadeOut {
+    .opacity(0);
+  }
+  .fadeOutUp {
+    
+  } 
+}
+
+//durations
+.dur-fast {
+  -webkit-animation-duration: 0.5s;
+     -moz-animation-duration: 0.5s;
+       -o-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}    
+.dur-slow {
+  //.transition(all 2s ease-out);
+  -webkit-animation-duration: 2s;
+     -moz-animation-duration: 2s;
+       -o-animation-duration: 2s;
+          animation-duration: 2s;  
+}
+.dur-x-slow {
+  //.transition(all 3s ease-out);
+  -webkit-animation-duration: 3s;
+     -moz-animation-duration: 3s;
+       -o-animation-duration: 3s;
+          animation-duration: 3s;   
+}
+
+//duelays
+.de-02 {
+  animation-delay:0.2s;
+  -webkit-animation-delay:0.2s;
+}
+.de-04 {
+  animation-delay:0.4s;
+  -webkit-animation-delay:0.4s;
+}
+.de-06 {
+  animation-delay:0.6s;
+  -webkit-animation-delay:0.6s;
+}
+.de-08 {
+  animation-delay:0.8s;
+  -webkit-animation-delay:0.8s;
+}
+.de-1 {
+  animation-delay:1s;
+  -webkit-animation-delay:1s;
+}
+.de-12 {
+  animation-delay:1.2s;
+  -webkit-animation-delay:1.2s;
+}
+.de-14 {
+  animation-delay:1.4s;
+  -webkit-animation-delay:1.4s;
+}
+.de-16 {
+  animation-delay:1.6s;
+  -webkit-animation-delay:1.6s;
+}
+.de-18 {
+  animation-delay:1.8s;
+  -webkit-animation-delay:1.8s;
+}
+.de-2 {
+  animation-delay:2s;
+  -webkit-animation-delay:2s;
+}

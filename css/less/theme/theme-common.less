@@ -1,0 +1,178 @@
+//======================================
+// Theme Common Elements
+//
+// Non-bootstrap theme-specific custom code
+// Non-theme-specific = theme-utilities.less
+//======================================
+
+// Branding
+// -------------------------------------------
+.navbar .brand {
+  padding: 0;
+  margin: (@navbarHeight - 74)/2 0; //@navbarHeight - logo_height/2
+  display: block;
+  text-shadow: none;
+  line-height: 1;
+  text-align: center;
+  color: @white;
+  .transition(all 0.4s ease-out);
+}
+.brand {
+  h1 {
+    display: inline-block;
+    font-size: 40px;
+    color: @primary_colour;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    
+    a {
+      display: block;
+      width: 230px;
+      height: 74px;
+      text-indent: -1000000px;
+      .at2x('../img/misc/icon_logo.png', 230px, 74px);
+      
+      &:hover {
+        .opacity(80);
+      }
+    }
+  }
+}
+.slogan {
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.2;
+  color: @gray;
+  text-align: center;
+}
+
+.cv-download {
+  margin-top: 22px;
+}
+
+// Blocks
+// -------------------------------------------
+.block {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  position: relative;
+  
+  // padding
+  &.thin {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+  &.large {
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+  
+  // fills
+  &.gray,
+  .gray {
+    background-color: #edf0f4;
+  }
+  &.gray-light,
+  .gray-light {
+    background-color: #f9f9f9;
+  }
+  
+  &.primary,
+  .primary {
+    background-color: @primary_colour;
+  }
+  
+  
+  &.primary, .primary {
+    color: @primary_colour_grad_start;
+  
+    h1, h2, .bold {
+      color: @white; 
+    }
+    h3, h4, h5, p {
+      color: @primary_colour_grad_start;
+      
+      &.bold {
+        color: @white;
+      }
+    }
+  }
+  
+  // spacers
+  &.border-bottom,
+  .border-bottom {
+    border-bottom: 1px solid #ccc;
+  }
+  &.border-bottom-light,
+  .border-bottom-light {
+    border-bottom: 1px solid #eee;
+  }
+  &.border-bottom-white,
+  .border-bottom-white {
+    border-bottom: 1px solid #fff;
+  }  
+  &.border-top,
+  .border-top {
+    border-top: 1px solid #ccc;
+  }
+  &.border-top-light,
+  .border-top-light {
+    border-top: 1px solid #eee;
+  }
+  &.border-top-white,
+  .border-top-white {
+    border-top: 1px solid #fff;
+  }  
+}
+
+// Switcher
+// -------------------------------------------
+.colour {
+  cursor: pointer;
+  
+  &:after {
+    font-size: 11px;
+    padding-left: 5px;
+    .fontawesome-bg('\F10C');
+  }
+  
+  &.on{
+    &:after {
+      //colour scheme
+      .fontawesome-bg('\F111');
+    }
+  }
+}
+
+// Social media icons
+// -------------------------------------------
+.social-media {
+  text-align: center;
+  
+  a {
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+    margin: 1em 0.3em;
+    
+    i {
+      font-size: @baseFontSize * 3.25;
+    }
+  }
+}
+
+// title spacers
+// -------------------------------------------
+h1.title-divider {
+  margin-top: 3em;
+}
+h2.title-divider {
+  margin-top: 2em;
+}
+h3.title-divider {
+  margin-top: 1em;
+}

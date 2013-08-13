@@ -1,0 +1,65 @@
+//======================================
+// Services section 
+//======================================
+
+#services {
+  border-bottom: 4px solid #D8DFE7;
+  padding-bottom: 4em;
+  
+  .service {
+    text-align: center;
+    padding: 1em;
+    
+    h3 {
+      font-size: 2em;
+      margin-bottom: 0;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+    p {
+      line-height: 120%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #services {
+    padding-bottom: 2em;
+  }
+}
+
+// services
+@service-height: 100px;
+@service-width: 100px;
+[class^="service-"], [class*=" service-"] {
+  display: block;
+  height: @service-height;
+  width: @service-width;
+  
+  &.centered {
+    margin: 0 auto;
+  }
+}
+
+.service-agile {
+  .at2x('../img/services/service-agile.png', @service-height, @service-width);
+} 
+.service-backend {
+  .at2x('../img/services/service-backend.png', @service-height, @service-width);
+} 
+.service-css3 {
+  .at2x('../img/services/service-css3.png', @service-height, @service-width);
+} 
+.service-drupal {
+  .at2x('../img/services/service-drupal.png', @service-height, @service-width);
+} 
+.service-html5 {
+  .at2x('../img/services/service-html5.png', @service-height, @service-width);
+} 
+.service-pm {
+  .at2x('../img/services/service-pm.png', @service-height, @service-width);
+} 
+.service-wordpress {
+  .at2x('../img/services/service-wordpress.png', @service-height, @service-width);
+}
+

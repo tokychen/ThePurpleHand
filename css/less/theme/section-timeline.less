@@ -1,0 +1,367 @@
+//======================================
+// Timeline section
+//======================================
+.timeline-list-reset {    
+  .clearfix;
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+@timeline-item-bg: #EDF0F5;
+@timeline-item-margin: 30px;
+
+// Section specifics
+//======================================
+
+.experience {
+  .timeline {
+    margin-top: 2em;
+  }
+}
+
+// Timeline - reuseble
+//======================================
+.timeline {
+  .timeline-list-reset;
+  .at2x('../img/misc/bg_timeline-line.png', 2px, auto);
+  background-repeat: repeat-y;
+  background-position: center top;
+  
+  ul {
+    .timeline-list-reset;
+    padding: 2em 0 6em 0;
+  }
+}
+.timeline-breaker {
+  background: #0C0F32;
+  color: @white;
+  font-size: 24px;
+  font-weight: 600;
+  .border-radius(2px);
+  width: 150px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0.5em 1em;
+  line-height: 1;
+  display: block;
+  position: relative;
+  
+  //down arrow
+  &:after, 
+  &:before  {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+   
+  &:after  {
+    border-top-color: #0C0F32;
+    border-width: 10px;
+    left: 50%;
+    margin-left: -10px;
+  }
+   
+  &:before {
+    border-top-color: rgba(0,0,0,0.01);
+    border-width: 11px;
+    left: 50%;
+    margin-left: -11px;
+  }
+  
+  //colour highlights
+  .primary {
+    
+  }
+}
+.timeline-item {
+  float: left;
+  width: 42%;
+  padding: 2%;
+  background: @timeline-item-bg;
+  .border-radius(4px);
+  .clearfix;
+  margin-top: -80px;
+  position: relative;
+  right: @timeline-item-margin;
+  margin-left: 4%;
+  clear: both;
+
+  //arrows & marker
+  &:after, 
+  &:before  {
+    top: 50%;
+    right: -(@timeline-item-margin - 10);
+    position: absolute;
+    pointer-events: none;
+    margin: 0;
+    display: block;
+    font-size: 30px;
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+    text-align: center;
+    margin-top: -15px; //half the height
+  }
+  &:before {
+    //arrow
+    .fontawesome-bg('\F0DA');
+    color: @timeline-item-bg;
+  }
+  &:after {
+    //marker
+    .fontawesome-bg('\F140');
+    right: -(@timeline-item-margin+15);
+    background: white;
+  }
+  
+  &:first-child {
+    margin-top: 0;
+  }  
+  &.right {
+    float: right;
+    left: @timeline-item-margin;
+    right: 0;
+    margin-right: 4%;
+    margin-left: 0;
+
+    //arrows & marker
+    &:after, 
+    &:before  {
+      left: -(@timeline-item-margin - 10);
+    }
+    &:before {
+      .fontawesome-bg('\F0D9');
+    }
+    &:after {
+      left: -(@timeline-item-margin+15);
+    }    
+  }
+
+  //spacers
+  &.overlap-off {
+    margin-top: 0;
+  }  
+  &.overlap-pull-large {
+    margin-top: -120px;
+  }
+  &.overlap-pull-small {
+    margin-top: -30px;
+  }  
+
+  &.overlap-push-large {
+    margin-top: 120px;
+  }
+  &.overlap-push-medium {
+    margin-top: 60px;
+  } 
+  &.overlap-push-small {
+    margin-top: 30px;
+  }  
+  
+  //highlight colours
+  
+}
+
+//default is float left
+.timeline-item-date {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 20px;
+}
+.timeline-item-role {
+  margin: 0 0 10px 0;
+}
+.timeline-item-description {
+  font-size: 15px;
+  line-height: 1.4;
+}
+.timeline-item-photo {
+  float: left;
+  margin-right: 1em;
+  
+  &.right {
+    float: right;
+    margin-right: 0;
+    margin-left: 1em;
+  }
+}
+
+.timeline-end {
+  text-align: center;
+  background: @white;
+  
+  .timeline-breaker {
+    margin-bottom: 5px;
+    width: auto;
+    background-color: transparent;
+    color: #0C0F32;
+    
+    &:after, 
+    &:before  {
+      display: none;
+    }
+  }
+  
+  .btn {
+    min-width: 200px;
+  }
+}
+
+//variation - stacked
+.timeline-stacked {
+  
+  &.timeline {
+    ul {
+      padding: 1em 2em 6em 2em;
+    }
+  }
+  
+  //stack items & move markers
+  .timeline-item {
+    float: none;
+    left: auto;
+    right: auto;
+    width: 80%;
+    margin: 60px auto 0 auto;    
+    
+    &.right {
+      float: none;
+      left: auto;
+      right: auto;      
+    }
+  }
+  //arrows & marker
+  .timeline-item.right:after, 
+  .timeline-item.right:before,
+  .timeline-item:after, 
+  .timeline-item:before  {
+    top: -20px;
+    right: 50%;
+    left: 50%;
+    margin-top: 0; //half the height
+    margin-left: -15px;
+  }
+  .timeline-item.right:before,
+  .timeline-item:before {
+    //arrow
+    .fontawesome-bg('\F0D8');
+  }
+  .timeline-item.right:after, 
+  .timeline-item:after {
+    //marker
+    .fontawesome-bg('\F140');
+    top: -40px;
+  }
+  
+  //downward markings
+  &.down {
+    .timeline-item:first-child {
+      margin-top: 0;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 60px;
+    }    
+    
+    //makrers & arrows down
+    .timeline-item.right:after, 
+    .timeline-item.right:before,
+    .timeline-item:after, 
+    .timeline-item:before  {
+      bottom: -20px;
+      top: auto;
+    }
+    .timeline-item.right:before,
+    .timeline-item:before {
+      //arrow
+      .fontawesome-bg('\F0D7');
+    }
+    .timeline-item.right:after, 
+    .timeline-item:after {
+      //marker
+      bottom: -40px;
+      top: auto;
+    }
+  }
+  
+  .timeline-item-photo {
+    //can't clear the float so make image small
+    max-width: 50px;
+    margin-bottom: 0.5em;
+  }
+  
+  //spacers reset
+  .timeline-item {
+    &:first-child,
+    &.overlap-off,
+    &.overlap-pull-large,
+    &.overlap-pull-small,
+    &.overlap-push-large,
+    &.overlap-push-medium{
+      margin-top: 60px;
+    }  
+  }  
+}
+
+.timeline {
+  .timeline-item.highlight {
+    &:after {
+      color: @primary_colour_light;
+    }
+  }
+}
+
+//
+// Responsive: Landscape phone to desktop/tablet (narrow)
+// --------------------------------------------------
+@media (max-width: 767px) {
+  .timeline-stacked;
+  
+  .timeline {
+    .timeline-breaker {
+      //width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    
+    .timeline-item {
+      width: 96%;
+    }
+  }
+
+  .timeline-end {    
+    .timeline-breaker {
+      margin-bottom: 5px;
+    }
+    
+    .btn {
+      display: block;
+    }
+  }  
+}
+
+//
+// Responsive: Landscape phone to desktop/tablet (narrow)
+// --------------------------------------------------
+@media (max-width: 480px) {
+  .timeline {
+    ul {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    
+    .timeline-item {
+      padding: 4%;
+      width: 92%;
+      
+      .timeline-item-photo {
+        max-width: 50px;
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+//======================================
+// Mobile menu using jPanel Menu
+// 
+//======================================
+
+.mobile-toggle-trigger {
+  font-size: 36px;
+  color: @primary_colour;
+  display: none;
+  cursor: pointer;
+  padding: 2px 8px;
+  float: right;
+  background: #eee;
+  .border-radius(2px);
+  z-index: 1000;
+  .transition(all 0.1s);
+  margin-top: 36px;
+  
+  &:hover,
+  &.open {
+    color: @white;
+    background: #B6C2D2;
+    text-decoration: none;
+  }
+}
+
+// Scroll tools
+.scroll-nav {
+  position: fixed;
+  top: 10px;
+  right: -100px;
+  margin-top: 0;
+  .border-radius(2px 0 0 2px);
+  
+  &.scroll-show {
+    right: 0;
+  }
+}
+
+.jpanel-menu-open {
+  .scroll-nav {    
+    &.scroll-show {
+      right: 250px;
+    }
+  }
+}
+
+//mobile menu
+#jPanelMenu-menu {
+  background: #B6C2D2;
+  overflow-y: hidden !important;
+  
+  //override menu 
+  #main-menu {
+    li {    
+      a {
+        margin: 5px 10px;
+        padding: 0.5em 1em;
+        height: auto;
+        line-height: normal;
+        .border-radius(2px);
+        text-align: left;
+        background: #EDF0F5;
+        
+        &.stamp {
+          .rotate(0deg);
+          width: auto;
+          font-size: @fontSizeLarge;
+          background: #54bac8;
+        }
+      }
+      
+      &.current {
+        a {
+          background: @white;
+          
+          &.stamp {
+            background: @primary_colour;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Navbar Collapsed (mobile)
+// -----------------
+@media (max-width: @navbarCollapseWidth) {
+  .mobile-toggle-trigger {
+    display: block;
+  }
+  .mobile-toggle {
+    display: none;
+  }
+  #jPanelMenu-menu {
+    display: block; 
+  }  
+}

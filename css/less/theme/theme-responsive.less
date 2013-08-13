@@ -1,0 +1,111 @@
+//
+// Theme specific responsive tweaks
+// --------------------------------------------------
+
+//////////////////////////////////////
+// Navbar changes
+//////////////////////////////////////
+
+// Navbar Collapsed (mobile)
+// -----------------
+@media (max-width: @navbarCollapseWidth) {
+
+}
+
+// Navbar Expanded (desktop)
+// ---------------
+@media (min-width: @navbarCollapseDesktopWidth) {
+
+}
+
+
+//////////////////////////////////////
+// General changes
+//////////////////////////////////////
+
+
+//
+// Responsive: Large desktop and up (wide)
+// --------------------------------------------------
+@media (min-width: 1200px) {
+
+}
+
+//
+// Responsive: Mobile to desktop (narrow) - common for all narrow devices
+// --------------------------------------------------
+@media (max-width: 979px) {  
+  
+}
+
+//
+// Responsive: Tablet to desktop (normal)
+// --------------------------------------------------
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+//
+// Responsive: Landscape phone to desktop/tablet (narrow)
+// --------------------------------------------------
+@media (max-width: 767px) {
+  body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .modal {  
+    &.small,
+    &.medium {
+      width: auto;
+      margin-left: 0;
+      padding: 1em;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+  }
+  
+  .block {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  
+    &.thin {
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+    }
+    &.large {
+      padding-top: 3em;
+      padding-bottom: 3em;
+    }    
+  }
+  
+  //features
+  //explore tabs content
+  .tab-content,
+  .pill-content {
+    overflow: visible;
+    
+    .tab-pane,
+    .pill-pane {
+      display: block;
+      margin-bottom: 2em;
+    }
+  }
+  
+}
+
+//
+// Responsive: Up to Landscape phone (mobile)
+// ---------------------
+
+@media (max-width: 480px) {  
+
+  
+  #footer .pull-right {
+    text-align: left;
+    float: none;
+  }
+}

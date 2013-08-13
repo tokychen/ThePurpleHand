@@ -1,0 +1,172 @@
+//======================================
+// Work/projects section 
+//======================================
+
+.work {
+  .flex-direction-nav {
+    display: block;
+    
+    a {
+      top: auto;
+      bottom: 20px;
+      height: 40px;
+      line-height: 40px;
+      width: 40px;
+      background: #fff;
+      right: 61px;
+      .border-radius(2px);
+      
+      &.flex-next {
+        right: 20px;
+      }
+    }
+  } 
+  
+  //featured project
+  #full-view {
+    position: relative;
+    background-color: #edf0f4;
+    list-style: none;
+    margin: 0 0 1px 0;
+    border: 1px dotted #D8DFE7;
+    .border-radius(0);
+    .box-shadow(none);
+    padding: 20px;
+    .border-box;
+    
+    .close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      display: block;
+      font-size: 0;
+      text-align: center;
+      
+      &:before {
+        .icomoon-bg("\e0fc");
+        font-size: 18px;
+      }
+    }
+  }
+  
+  //projects pager
+  .items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    
+    .item {
+      display: block;
+      float: left;
+      width: 12.5%;
+      max-width: 146px;
+      //min-width: 90px;
+      margin: 0 0;
+      
+      
+      a {
+        background: #ccc;
+        display: block;
+        
+        img {
+          .opacity(50);
+          .border-box;
+        }
+        i {
+          color:@white;
+        }
+        
+        &:hover,
+        &.flex-active {
+          background: @primary_colour_light;
+          
+          img {
+            .opacity(70);
+          }
+        }
+      }
+      
+      .project-title {
+        margin: 5px 0 0 0;
+        font-size: 16px;
+        display: block;
+      }
+    }
+  }  
+}
+
+.clients {
+  background-color: #f6f7f9;
+  border-bottom: 4px solid #edf0f4;
+  
+  .flex-viewport {
+    margin: 0 80px;
+  }
+  
+  .items {
+    padding: 0.5em 0;
+    .clearfix();
+    
+    .item {
+      float: left;
+      width: 250px;
+      margin: 0;
+      text-align: center;
+    }
+  }  
+}
+
+
+//
+// Responsive: Landscape phone to desktop/tablet (narrow)
+// --------------------------------------------------
+@media (max-width: 767px) {
+  .work {
+    #full-view {
+      display: block !important;
+      
+      .close {
+        display: none;
+      }      
+    }   
+    
+    .work-items {
+      display: none;
+    }
+  } 
+}
+
+//
+// Responsive: Landscape phone to desktop/tablet (narrow)
+// --------------------------------------------------
+@media (max-width: 480px) {
+  .work {
+    #full-view {
+      padding: 10px;
+      
+      h3.title {
+        font-size: 28px;
+        margin-bottom: 5px;
+      }
+      p {
+        font-size: 15px;
+        line-height: 1.2;
+      }
+    }
+    
+    .flex-direction-nav {
+      display: none;
+    }
+  }
+  
+  .clients {
+    .flex-viewport {
+      width: 250px;
+      margin: 0 auto;
+    } 
+  }  
+}

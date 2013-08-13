@@ -1,0 +1,63 @@
+/*******************************************************
+ *
+ * Custom theme code styles
+ * Written by Themelize.me (http://themelize.me)
+ * 
+ * This is an empty starter template for overriding styles
+ * set by Bootstrap & the theme
+ *
+ * NOTE: We recommend putting all custom CSS code here to make updates easier!
+ * 
+ * ----------------------------------------------------
+ * 
+ * Remove unused code & commenting for better performances
+ * 
+ * ----------------------------------------------------
+ * 
+ * @see - Usefuls tools online for editing
+ * 1. http://charliepark.org/bootstrap_buttons/ - Button style generator
+ * 2. http://www.colorzilla.com/gradient-editor/ - CSS3 gradient maker
+ * 
+ * 
+ ******************************************************/
+/*******************************************************
+ *
+ * @section 1. General Elements
+ * 
+ ******************************************************/
+/*******************************************************
+ *
+ * @section 2. Colours
+ * 
+ ******************************************************/
+/*******************************************************
+ *
+ * @section 3. Responsiveness/media queries
+ * 
+ ******************************************************/
+@media (max-width: 979px) {
+  /* Navbar Collapsed (mobile) */
+}
+@media (min-width: 980px) {
+  /* Navbar Expanded (desktop) */
+}
+@media (min-width: 1200px) {
+  /* Responsive: Large desktop and up (wide) */
+}
+@media (max-width: 979px) {
+  /* Responsive: Mobile to desktop (common for all narrow devices) */
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  /* Responsive: Tablet to desktop (normal) */
+}
+@media (max-width: 767px) {
+  /* Responsive: Landscape phone to desktop/tablet (narrow) */
+}
+@media (max-width: 480px) {
+  /* Responsive: Up to Landscape phone (mobile) */
+}
+/*******************************************************
+ *
+ * @section 4. Misc
+ * 
+ ******************************************************/

@@ -1,0 +1,206 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+// Core
+.btn {
+  text-transform: uppercase;
+  .buttonBackgroundFlat(@btnBackground, darken(@btnBackgroundHighlight, 5%), @grayDark, 0 1px 1px rgba(255,255,255,.75));
+  border: none;
+  color: #2D3469;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  
+  [class^="icon-"],
+  [class*=" icon-"] {
+    padding-right: 8px;
+  }
+}
+
+.btn-shadow {
+  .box-shadow(0 1px 5px darken(@grayLighter, 30%));
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+// Large
+.btn-large {
+  padding: 16px 30px;
+  font-size: @fontSizeLarge;
+  .border-radius(@borderRadiusLarge);
+  font-weight: bold;
+}
+.btn-large [class^="icon-"],
+.btn-large [class*=" icon-"] {
+  margin-top: 0;
+  font-size: @fontSizeLarge + 4;
+  padding-left: 12px;
+}
+
+// Small
+.btn-small {
+  padding: @paddingSmall;
+  font-size: @fontSizeSmall - 4;
+  .border-radius(@borderRadiusSmall);
+}
+.btn-small [class^="icon-"],
+.btn-small [class*=" icon-"] {
+  margin-top: 0;
+}
+.btn-mini [class^="icon-"],
+.btn-mini [class*=" icon-"] {
+  margin-top: -1px;
+}
+
+// Mini
+.btn-mini {
+  padding: @paddingMini;
+  font-size: @fontSizeMini - 3;
+  .border-radius(@borderRadiusSmall+2);
+}
+
+.btn-group > .btn-mini {
+  font-size: @fontSizeMini - 4;
+}
+.btn-group > .btn-small {
+  font-size: @fontSizeSmall - 4;
+}
+.btn-group > .btn-large {
+  font-size: @fontSizeLarge - 6;
+}
+
+// Set the backgrounds
+// -------------------------
+.btn-primary {
+  text-shadow: none;
+  .buttonBackgroundFlat(@btnPrimaryBackground, darken(@btnPrimaryBackgroundHighlight, 8%));
+}
+// Warning appears are orange
+.btn-warning {
+  .buttonBackgroundFlat(@btnWarningBackground, darken(@btnWarningBackgroundHighlight, 10%));
+}
+// Danger and error appear as red
+.btn-danger {
+  .buttonBackgroundFlat(@btnDangerBackground, @btnDangerBackgroundHighlight);
+}
+// Success appears as green
+.btn-success {
+  .buttonBackgroundFlat(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
+}
+// Info appears as a neutral blue
+.btn-info {
+  .buttonBackgroundFlat(@btnInfoBackground, @btnInfoBackgroundHighlight);
+}
+// Inverse appears as dark gray
+.btn-inverse {
+  .buttonBackgroundFlat(@btnInverseBackground, lighten(@btnInverseBackgroundHighlight, 30%));
+}
+
+
+// button combos
+// -----------------
+.btn-group {
+  text-align: center;
+  
+  .btn {
+    .border-radius(0);
+    
+    &:first-child {
+      border-right: 0;
+      .border-top-left-radius(5px);
+      .border-bottom-left-radius(5px);
+    }
+    &:last-child {
+      border-left: 0;
+      .border-top-right-radius(5px);
+      .border-bottom-right-radius(5px);
+    }    
+  }
+}
+
+// Custom
+// -------------------------
+.btn {
+  [class^="icon-"],
+  [class*=" icon-"] {
+    padding-right: 4px;
+    padding-left: 0;
+  }  
+  &.btn-large {
+    [class^="icon-"],
+    [class*=" icon-"] {
+      padding-right: 8px;
+      padding-left: 0;
+    }
+  }
+  
+  &.btn-square {
+    .border-radius(1px);
+  }
+}
+.btn-icon-right {
+  [class^="icon-"],
+  [class*=" icon-"] {
+    padding-left: 4px;
+    padding-right: 0;
+  }  
+  &.btn-large {
+    [class^="icon-"],
+    [class*=" icon-"] {
+      padding-left: 8px;
+      padding-right: 0;
+    }
+  }
+}
+
+// Primary
+// -------------------------
+.btn-primary-dark {
+  .btn-primary;
+  .buttonBackgroundFlat(@primary_colour_dark, lighten(@primary_colour_dark, 10%));
+}
+.btn-primary-light {
+  .btn-primary;
+  .buttonBackgroundFlat(@primary_colour_light, darken(@primary_colour_light, 10%));
+}
+.btn-primary-grad {
+  .btn-primary;
+  .buttonBackground(@primary_colour_grad_end, @primary_colour_grad_start, @grayDark, 0 1px 1px rgba(255,255,255,.75));
+  border: none;
+  color: #2D3469;
+  .btn-shadow;
+  .box-shadow(0 0 2px #2D3469);
+}
+
+// Alternative
+// -------------------------
+.btn-alt {
+  .buttonBackgroundFlat(@alt_colour, lighten(@alt_colour, 5%));
+}
+.btn-alt-dark {
+  .btn-alt;
+  .buttonBackgroundFlat(@alt_colour_dark, lighten(@alt_colour_dark, 8%));
+}
+.btn-alt-light {
+  .btn-alt;
+  .buttonBackgroundFlat(@alt_colour_light, darken(@alt_colour_light, 5%));
+}
+.btn-alt-grad {
+  .btn-alt;
+  .buttonBackground(@alt_colour_grad_end, @alt_colour_grad_start, @grayDark, 0 1px 1px rgba(255,255,255,.75));
+  border: none;
+  color: @alt_colour_dark;
+  .btn-shadow;
+  .box-shadow(0 0 2px #2D3469);
+  
+  &:hover {
+    color: darken(@alt_colour_dark, 10%);
+  }
+}

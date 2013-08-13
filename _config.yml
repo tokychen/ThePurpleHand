@@ -1,0 +1,15 @@
+markdown: rdiscount
+pygments: true
+permalink: /by/:title
+rdiscount:
+  extensions: [smart]
+
+name: The Purple Hand
+url: http://thepurplehand.albertobissacco.org
+description: The Purple Hand - Custom Made Jewellery
+author: Alberto Bissacco
+
+
+### uncomment for local DEVELOPMENT with pow ###
+# destination: public
+exclude: [README.markdown]
